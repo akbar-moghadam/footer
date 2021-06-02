@@ -7,7 +7,7 @@
 
 $bg-color:#0b090a;
 $fg-color:#f7fff7;
-$gr-color:#161a1d;
+$gr-color:#50514f;
 
 %display-flex{
     display: flex;
@@ -19,10 +19,37 @@ $gr-color:#161a1d;
     width: 100%;
     min-height: 25rem;
 }
-.footer-container{
+.footer{
 @extend %display-flex;
 width: 100%;
 min-height: 22rem;
 background: $bg-color;
-background: linear-gradient(to bottom,$bg-color,$gr-color);
+background: linear-gradient(to bottom left,$bg-color,$gr-color);
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    padding: 20px;
+    margin: 0.5rem;
+    background: teal;
+    width: 100%;
+    height: 100%;
+}
+.about-container{
+    @extend %display-flex;
+    flex-direction: column;
+    background-color: tomato;
+
+    .social-container{
+        
+        width: 100%;
+        .social-icons{
+            @extend %display-flex;
+            flex-direction: row;
+            width: 100%;
+            
+        }
+       
+    }
 }
