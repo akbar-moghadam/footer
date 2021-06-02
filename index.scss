@@ -8,6 +8,7 @@
 $bg-color:#0b090a;
 $fg-color:#f7fff7;
 $gr-color:#50514f;
+$line-color:#e63946;
 
 %display-flex{
     display: flex;
@@ -39,8 +40,10 @@ background: linear-gradient(to bottom left,$bg-color,$gr-color);
 .about-container{
     @extend %display-flex;
     flex-direction: column;
-    background-color: tomato;
-
+    margin-left: 1rem;
+    width: 80%;
+    height: 100%;
+    
     .social-container{
         
         width: 100%;
@@ -48,8 +51,43 @@ background: linear-gradient(to bottom left,$bg-color,$gr-color);
             @extend %display-flex;
             flex-direction: row;
             width: 100%;
+            margin:10px;
+            padding-top: 20px;
+            list-style: none;
+
+            li{
+                margin: 10px;
+                padding: 10px;
+            }
             
         }
        
+    }
+}
+.body{
+    margin: 10px;
+    padding: 10px;
+}
+.title{
+      @extend %display-flex;
+      width: 100%;
+      margin: 5px;
+      padding-bottom: 10px;
+      position: relative;
+        ::after{
+            content: "";
+            width: 10%;
+            border-bottom: solid 2px $line-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            
+        }
+    
+      
+    h2{
+        width: 100%;
+        text-align: left;
+        
     }
 }
