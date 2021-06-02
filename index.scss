@@ -1,0 +1,28 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$bg-color:#0b090a;
+$fg-color:#f7fff7;
+$gr-color:#161a1d;
+
+%display-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body-container{
+    width: 100%;
+    min-height: 25rem;
+}
+.footer-container{
+@extend %display-flex;
+width: 100%;
+min-height: 22rem;
+background: $bg-color;
+background: linear-gradient(to bottom,$bg-color,$gr-color);
+}
