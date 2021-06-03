@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-.footer, .about-container, .about-container .social-container .social-icons, .title {
+.footer, .about-container, .about-container .social-container .social-icons, .title, .quick-container, .contact-container, .contact-list, .contact-tel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,8 +33,8 @@
 .footer-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 0.5fr;
+      grid-template-columns: 1fr 1fr 1fr 0.5fr;
   row-gap: 20px;
   padding: 20px;
   margin: 0.5rem;
@@ -119,5 +119,70 @@
   color: #e63946;
   -webkit-box-shadow: 0 20px 10px -3px #ced4da;
           box-shadow: 0 20px 10px -3px #ced4da;
+}
+
+.quick-container, .contact-container {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  margin: 5px;
+  padding: 10px;
+}
+
+.quick-container ul, .contact-container ul {
+  list-style: none;
+  width: 100%;
+}
+
+.quick-container ul li, .contact-container ul li {
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.quick-container ul li a, .contact-container ul li a {
+  text-decoration: none;
+  color: #ced4da;
+}
+
+.quick-container ul li a:hover, .contact-container ul li a:hover {
+  color: #f7fff7;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  color: #ced4da;
+  height: 100%;
+  justify-self: flex-start;
+}
+
+.contact-list {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 60%;
+  margin: 10px 5px;
+  padding: 10px;
+}
+
+.contact-tel {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+  .footer-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=index.css.map */
